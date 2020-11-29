@@ -138,6 +138,14 @@ export default Vue.component('calculator', {
       return `${index} laps prior`
     },
   },
+  updated() {
+    localStorage.setItem('racefuel', JSON.stringify(this.$data))
+  },
+  mounted() {
+    const stored = localStorage.getItem('racefuel')
+    if (!stored) return
+    Object.assign(this, JSON.parse(stored))
+  },
   template: `
   <div>
     <block heading="Performance">
