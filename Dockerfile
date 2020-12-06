@@ -3,8 +3,11 @@ FROM $BASE as build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
-COPY . ./
+
+COPY ./tsconfig.json ./
+COPY src src/
 RUN npm run tsc
+COPY . ./
 
 FROM build as clean
 RUN npm prune --production
