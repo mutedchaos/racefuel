@@ -1,19 +1,18 @@
 {
   "name": "racefuel",
   "version": "1.0.0",
-  "description": "",
+  "description": "A race fueld calculator",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "serve public",
     "watch": "npm run tsc -- --watch",
-    "tsc": "tsc --project tsconfig.json"
+    "tsc": "tsc --project tsconfig.json",
+    "build": "npm run tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "/mnt/e/Dropbox/projects/racefuel"
-  },
-  "author": "",
+  "repository": "mutedchaos/racefuel",
+  "author": "Tapani Haka <tapani.haka@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.2.1",
